@@ -12,5 +12,4 @@ html, body {
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  filter: brightness(80%) saturate(125%) contrast(125%);
 }

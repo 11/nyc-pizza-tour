@@ -1,7 +1,8 @@
-import { LitElement, html, css } from 'https://cdn.jsdelivr.net/npm/lit@3.1.2/+esm'
+// https://lit.dev/
+import { LitElement, html } from 'https://cdn.jsdelivr.net/npm/lit@3.1.2/+esm'
+
+// https://swiperjs.com/
 import 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js'
-
-
 
 class PizzaList extends LitElement {
   mapCenter = [40.72813379219229, -73.97424062703037]
@@ -36,7 +37,7 @@ class PizzaList extends LitElement {
       console.log('DEBUG: ', activeIndex)
       const pizzaPlace = this.pizzaPlaces[activeIndex]
       window.map?.flyTo(pizzaPlace.coords, 16, {
-        duration: .3
+        duration: .6
       })
     })
   }
@@ -71,7 +72,7 @@ class PizzaList extends LitElement {
       ${this.pizzaPlaces.map((pizzaShop, index)=> {
         return html`
           <swiper-slide
-            class='min-w-full h-screen flex flex-col justify-end'
+            class='min-w-full min-h-full flex flex-col justify-end'
             @click=${() => {
             }}
           >
